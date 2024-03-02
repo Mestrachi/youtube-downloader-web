@@ -1,15 +1,10 @@
-import Head from 'next/head';
+// pages/index.js
+import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
 
-const Home = () => {
-  return (
+const Home = () => (
+  <Layout>
     <div className={styles.container}>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>YouTube Video Downloader</title>
-      </Head>
-
       <main className={styles.main}>
         <h1>YouTube Video Downloader</h1>
         <form action="/download" method="post">
@@ -19,7 +14,7 @@ const Home = () => {
         </form>
       </main>
     </div>
-  );
-};
+  </Layout>
+);
 
 export default Home;
